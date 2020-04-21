@@ -42,6 +42,10 @@ public class LinkedList {
         temp.next = new_node;
     }
 
+    /**
+     * Append the data
+     * @param new_data
+     */
     private void append(int new_data) {
         Node new_node = new Node(new_data);
         if (head == null) {
