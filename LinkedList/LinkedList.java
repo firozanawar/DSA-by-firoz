@@ -367,6 +367,30 @@ public class LinkedList {
         return null;
     }
 
+    private Node reverseInPair(Node head) {
+        Node curr = head;
+        Node temp = null;
+        Node newHead = null;
+
+        while (curr != null && curr.next != null) {
+
+            if (temp != null) {
+                temp.next.next = curr.next;
+            }
+
+            temp = curr.next;
+            curr.next = temp.next;
+            temp.next = curr;
+
+            if (newHead == null)
+                newHead = temp;
+            curr = curr.next;
+        }
+
+
+        return newHead;
+    }
+
     public static void main(String[] args) {
 
         LinkedList linkedList = new LinkedList();
@@ -389,6 +413,10 @@ public class LinkedList {
         System.out.println();
         //linkedList.reversByIterative(linkedList.head);
 
+
+        linkedList.printListUsingHead(linkedList.reverseInPair(linkedList.head));
+        System.out.println();
+
         linkedList.middleElementM1(linkedList.head);
         linkedList.middleElementM2(linkedList.head);
 
@@ -404,6 +432,8 @@ public class LinkedList {
         linkedList.printListUsingHead(newHead);
         System.out.println();
         System.out.println("Linkedlist count is: " + linkedList.getCount(newHead));
+
+
 
 
         /******** Detect loop and final start loop point *********/
