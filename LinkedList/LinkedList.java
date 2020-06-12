@@ -397,9 +397,9 @@ public class LinkedList {
 
         linkedList.insertAtBeginning(1);
         linkedList.insertAtBeginning(2);
-        linkedList.insertAtBeginning(1);
-        linkedList.insertAtBeginning(2);
-        linkedList.insertAtBeginning(1);
+        linkedList.insertAtBeginning(3);
+        linkedList.insertAtBeginning(4);
+        linkedList.insertAtBeginning(5);
 
 //        linkedList.insertAtEnd(1);
 //        linkedList.insertAtEnd(2);
@@ -411,7 +411,7 @@ public class LinkedList {
         linkedList.printList();
 
         System.out.println();
-        //linkedList.reversByIterative(linkedList.head);
+        linkedList.reversByIterative(linkedList.head);
 
 
         linkedList.printListUsingHead(linkedList.reverseInPair(linkedList.head));
@@ -421,8 +421,8 @@ public class LinkedList {
         linkedList.middleElementM2(linkedList.head);
 
         System.out.println();
-        linkedList.nthElementFromEndM1(linkedList.head, 2);
-        linkedList.nthElementFromEndM2(linkedList.head, 2);
+//        linkedList.nthElementFromEndM1(linkedList.head, 2);
+//        linkedList.nthElementFromEndM2(linkedList.head, 2);
 
         System.out.println();
         System.out.println("Is Palindrome: " + linkedList.isPalindrome(linkedList.head));
